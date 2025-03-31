@@ -1,24 +1,24 @@
-#include<iostream>
+#include<iostream> 
 using namespace std;
 
-//Function Signature
-void printCounting(int num) {
-
-//    cout << n << endl;
-    //Function Body 
-    for(int i=1; i<=num; i++) {
-        cout<< i << " ";
+void print(int n) {
+    //base case
+    if(n == 0) {
+        return ;
     }
-    cout<<endl;
+
+    //Recursive relation
+    print(n-1);
+
+    cout << n << endl;
 }
 
 int main() {
 
     int n;
     cin >> n;
-
-    //function Call
-    printCounting(n);
+    cout << endl;
+    print(n);
 
 
     return 0;
