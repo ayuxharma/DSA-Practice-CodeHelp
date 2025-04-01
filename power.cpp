@@ -1,25 +1,24 @@
-#include<iostream>
+#include<iostream> 
 using namespace std;
 
-int power(int num1, int num2) {
-    
-    //cout << a <<endl;
+int power(int n) {
 
-    int ans = 1;
+    //base case 
+    if(n == 0)
+        return 1;
 
-    for(int i = 1; i <= num2; i++) {
-        ans = ans * num1;
-    }
-
-    return ans;
+    //recursive relation
+    return 2 * power(n-1);    
 }
-int main()
-{
-    int c , d;
-    cin>> c >> d;
 
-    int answer = power(c,d);
-    cout << " answer is " << answer << endl;
+int main() {
+
+    int n;
+    cin >> n;
+
+    int ans = power(n);
+
+    cout << ans << endl;
 
     return 0;
 }
